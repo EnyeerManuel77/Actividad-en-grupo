@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crucigrama</title>
+    <style>
+        .casilla{
+            width: 25px;
+            height: 25px;
+            border: none;
+        }
+        
+        .btn{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(8, 199, 8);
+            border-radius: 3px;
+            border: 2px solid green;
+            font-size: 18px;
+        }
+        .btn:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+        .pistas{
+            width: 800px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="all" align="center">
+        <img src="img/crucigrama.PNG">
+        
+        <table class="pistas">
+            <tr>
+                <h1>Pistas</h1>
+                <td>
+                    <b>1.</b> Protocolo de seguridad utilizado para cifrar la comunicacion en linea.<br>
+                    <b>3.</b> Conjunto de reglas y normas a seguir en situaciones especificas, especialmente en entornos formales.<br>
+                    <b>5.</b> Documento que proporciona evidencia oficial de la finalizacion de cierta actividad o logro.<br>
+                    <b>7.</b> Proceso de convertir informacion en un formato ilegible para que solo las personas con la clave correcta puedan entenderla.<br>
+                    <b>9.</b> Concepto que se refiere a estar protegido o resguardado de posibles peligros o daños.<br>
+                    <b>11.</b> Protocolo de comunicacion utilizado para la transferencia segura de datos en internet.<br>
+                </td>
+                <td>
+                    <b>2.</b> Es el proceso de transmitir informacion, ideas o sentimientos entre personas o entidades.<br>
+                    <b>4.</b> Enlace entre dispositivos para compartir informacion y recursos.<br>
+                    <b>6.</b> Programa que te permite explorar y buscar informacion en internet.<br>
+                    <b>8.</b> Concepto que se refiere al derecho y la capacidad de controlar quien tiene acceso a tu informacion personal.<br>
+                    <b>10.</b> Enlace que lleva a una pagina web.<br>
+                    <b>12.</b> El mismo concepto anterior pero de manera insegura.<br>
+                </td>
+            </tr>
+        </table>
+
+        <table class="table">
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C10" placeholder="12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F1C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C17" placeholder="1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F2C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C12" placeholder="2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F3C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C5" placeholder="8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F4C18"></td>
+            </tr>
+
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C9" placeholder="3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F5C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C7" placeholder="7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F6C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C17" placeholder="6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F7C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C9" placeholder="4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F8C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F9C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C4" placeholder="5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F10C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C2" placeholder="11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F11C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F12C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F13C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F14C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C5" placeholder="10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F15C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C1" placeholder="9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F16C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F17C18"></td>
+            </tr>
+            <tr>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C1"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C2"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C3"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C4"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C5"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C6"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C7"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C8"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C9"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C10"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C11"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C12"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C13"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C14"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C15"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C16"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C17"></td>
+                <td><input class="casilla" type="text" maxlength="1" id="F18C18"></td>
+            </tr>
+        </table>
+        <div id="msg"></div><br>
+        <br><br><button class="btn" onclick="validar()">VALIDAR</button>
+    </div>
+    <script src="Crucigrama.js"></script>
+</body>
+</html>
