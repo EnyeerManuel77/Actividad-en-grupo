@@ -13,9 +13,9 @@ let porBuscar = {
    'URL': false,
    'HTTP': false,
    'HTTPS': false,
-}
+};
 let li = {};
-let encontradas = 0
+let encontradas = 0;
 function empiezaSopa(
    characters ='ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
    ){
@@ -31,17 +31,18 @@ function empiezaSopa(
          
          c.type = 'button';
          c.className = 'btn btn-outline-light';
-         c.innerHTML = characters.charAt(Math.random() * 27);
-         c.id = c.innerHTML + rows + column;
-         c.setAttribute('onclick','crearPalabra('+c.id+');');
+         c.innerHTML = characters.charAt(random(27));
+         c.id = String(rows) + String(column);
+         c.setAttribute('onclick','crearPalabra("'+c.id+'");');
       }
       const oneLi = document.getElementById('i'+rows);
       if (oneLi) {
          li[oneLi.innerHTML] = oneLi.id;
       }
    }
+   distribuir(matriz);
 }
-function crearPalabra(button){
+function crearPalabra(id, button = document.getElementById(id)){
    button.setAttribute("disabled", "");
    palabra.push(button.innerHTML);
    buttons.push(button);
@@ -72,4 +73,23 @@ function noPalabra(palabraAgain = [], buttonsAgain = []) {
    buttons.forEach((each) => each.removeAttribute('disabled'));
    palabra = palabraAgain;
    buttons = buttonsAgain;
+}
+function distribuir(tablero, ){
+   for (const key in li) {
+      let position = {
+         fila: String(random(13)),
+         col: String(random(3)),
+         direccion: random(3),
+      };
+      for (let i = 0; i < key.length; i++) {
+         let button = document.getElementById(position.fila+position.col);
+         button.innerHTML = key[i];
+         //if (position.direccion == 0) {
+            position.col = String(Number(position.col) + 1);
+         //}
+      }
+   }
+}
+function random(n) {
+   return Math.floor(Math.random()*n);
 }
