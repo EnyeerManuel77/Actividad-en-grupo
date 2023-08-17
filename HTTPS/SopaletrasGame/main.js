@@ -30,7 +30,7 @@ function empiezaSopa(
          td.appendChild(c);
          
          c.type = 'button';
-         c.className = 'btn btn-outline-light';
+         c.className = 'btn btn-outline-primary';
          c.innerHTML = characters.charAt(random(27));
          c.id = String(rows) + String(column);
          c.setAttribute('onclick','crearPalabra("'+c.id+'");');
@@ -40,7 +40,6 @@ function empiezaSopa(
          li[oneLi.innerHTML] = oneLi.id;
       }
    }
-   distribuir(matriz);
 }
 function crearPalabra(id, button = document.getElementById(id)){
    button.setAttribute("disabled", "");
@@ -63,8 +62,9 @@ function buscarPalabra(){
             break;
          }
          if (encontradas === 12) {
-            alert('Has armado la sopa de letras');
-            window.location = ''; // COLOCAR AQUI ADENTRO A DONDE LO QUIERES REDIRIGUIR AL COMPLETAR EL JUEGO
+            alert('Muy bien has armado todos los conceptos C:');
+            window.location = '../';
+            break; 
          }
       }
    }
@@ -73,22 +73,6 @@ function noPalabra(palabraAgain = [], buttonsAgain = []) {
    buttons.forEach((each) => each.removeAttribute('disabled'));
    palabra = palabraAgain;
    buttons = buttonsAgain;
-}
-function distribuir(tablero, ){
-   for (const key in li) {
-      let position = {
-         fila: String(random(13)),
-         col: String(random(3)),
-         direccion: random(3),
-      };
-      for (let i = 0; i < key.length; i++) {
-         let button = document.getElementById(position.fila+position.col);
-         button.innerHTML = key[i];
-         //if (position.direccion == 0) {
-            position.col = String(Number(position.col) + 1);
-         //}
-      }
-   }
 }
 function random(n) {
    return Math.floor(Math.random()*n);
