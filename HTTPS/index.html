@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>HTTP y HTTPS</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <div id="logo">
+                <h1>HTTP Y HTTPS</h1>
+            </div>
+        </header>
+        <section class="content">
+            <aside id="left" class="sticky-menu">
+                <div>
+                    <ul>
+                        <a href="#tilulo1"><li>Concepto de HTTP</li></a>
+                        <a href="#tilulo2"><li>¿Qué es un protocolo de comunicación?</li></a>
+                        <a href="#tilulo3"><li>Funcionamiento</li></a>
+                        <a href="#tilulo4"><li>Concepto de HTTPS</li></a>
+                        <a href="#tilulo5"><li>Diferencias entre HTTP Y HTTPS</li></a>
+                        <a href="#tilulo6"><li>Ventajas y desventajas de HTTP y HTTPS</li></a>
+                        <a href="#tilulo7"><li>¿Certificado SSL?</li></a>
+                        <a href="#titulo8"><li>Mini-video</li></a>
+                        <a href="/crucigramaGame/Crucigrama.html"><li>QUIERO JUGAR</li></a>
+                    </ul>
+                </div>
+            </aside>
+            <div id="right">
+                <h2 id="tilulo1">Concepto de HTTP</h2>
+                <p>
+                    HTTP (Hypertext Transfer Protocol) es un protocolo de comunicación utilizado en la World Wide Web (WWW) para la 
+                    transferencia de datos entre un cliente (generalmente un navegador web) y un servidor web. HTTP es la base de la 
+                    comunicación en línea y permite que los usuarios soliciten y reciban recursos, como páginas web, imágenes, videos y otros archivos, a través de Internet.
+                </p>
+                <h2 id="tilulo2">¿Qué es un protocolo de comunicación?</h2>
+                <p>
+                    Es un sistema de reglas que permiten que dos o más entidades (computadoras, teléfonos celulares, etc.) 
+                    de un sistema de comunicación se comuniquen entre ellas para transmitir información, estableciendo 
+                    la forma de identificación de estos en la red, la forma de transmisión de los datos y la forma en que la información debe procesarse.
+                </p>
+                <h2 id="tilulo3">Funcionamiento</h2>
+                <p>
+                    El funcionamiento básico de HTTP involucra una serie de solicitudes y respuestas entre un cliente y un servidor:<br>
+                    1. <b>Solicitud (Request):</b> El cliente envía una solicitud HTTP al servidor para solicitar un recurso específico, como una página web. Esta solicitud contiene información como el método (GET, POST, PUT, DELETE, etc.), la URL del recurso deseado y otras cabeceras opcionales que pueden proporcionar información adicional al servidor.<br>
+                    2. <b>Procesamiento en el Servidor:</b> El servidor recibe la solicitud, procesa la solicitud y determina cómo responder. Puede ejecutar ciertas acciones, acceder a bases de datos, generar contenido dinámico, etc.<br>
+                    3. <b>Respuesta (Response):</b> El servidor genera una respuesta HTTP que contiene información sobre el estado de la solicitud y, si corresponde, el recurso solicitado. La respuesta también incluye una línea de estado que indica si la solicitud se procesó correctamente o si ocurrió algún error, además de cabeceras que proporcionan información adicional sobre la respuesta.<br>
+                    4. <b>Recuperación por el Cliente:</b> El cliente recibe la respuesta del servidor, analiza la línea de estado y las cabeceras para determinar cómo se maneja la respuesta. Si la respuesta incluye el recurso solicitado (como una página web), el cliente lo procesa y muestra al usuario. Si hubo un error, el cliente puede mostrar mensajes de error apropiados.<br>
+                </p>
+                <h2 id="tilulo4">Concepto de HTTPS</h2>
+                <p>
+                    El protocolo HTTPS es la evolución del HTTP en una versión segura. Este incluye una capa extra de protección a la hora de operar con datos de los usuarios. 
+                    El HTTPS utiliza una combinación de dos protocolos (HTTP + SSL) que hace que cualquier información personal que facilites en la web sea cifrada o encriptada y 
+                    nadie pueda acceder a ella, únicamente el navegador y el servidor web.
+                </p>
+                <h2 id="tilulo5">Diferencias entre HTTP Y HTTPS</h2>
+                <p>
+                    Los mensajes HTTP son de texto plano en donde las personas no autorizadas pueden acceder a ellos y leerlo fácilmente a través de internet, 
+                    por otra parte HTTPS lleva todos los datos de forma cifrada.
+                </p>
+                <h2 id="tilulo6">Ventajas y desventajas de HTTP y HTTPS</h2>
+                <p>
+                    <b>Las ventajas de HTTP</b> son: Mayor velocidad de carga, mejora del posicionamiento web, priorizacion automatica, menos consumo de banda ancha y presentacion inmediata. 
+                    La mayor desventaja es que cuenta con muy poca seguridad.<br>
+                    <b>Las ventajas de HTTPS</b> son: Mayor privacidad para los datos de los usuarios, genera confianza y credibilidad, aumenta la proteccion frente a ataques, mejora el SEO y
+                    aumenta el trafico y favorece a las ventas. Las desventajas son: Errores 404, problemas de migracion y rendimiento web.
+
+                </p>
+                <h2 id="tilulo7">Certificado SSL</h2>
+                <p>
+                    Un certificado SSL es un pequeño archivo de datos que vincula digitalmente una clave criptográfica con los datos de una organización. 
+                    Una vez instalado en el servidor web, el certificado activa el candado y el protocolo https y, de esta forma, se habilita una 
+                    conexión segura desde el servidor web hasta el navegador.
+                </p>
+                <h2 id="titulo8">Mini-video explicativo</h2>
+                <p>Hoy en dia los navegadores validan el uso de los certificados SSL mediante el protocolo HTTPS. ¿Acaso te preguntas como? Mira su funcionamiento resumido en el siguiente video: </p>
+                <video controls width="100%">
+                    <source src="CSS/video.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>
+        </section>
+        <footer>
+            <div id="logo">&copy;Sena</div>
+            <div id="f_right">2023</div>
+        </footer>
+    </div>
+    <script>
+        window.addEventListener("scroll", function() {
+            var stickyMenu = document.querySelector(".sticky-menu");
+            var headerHeight = document.querySelector("#header").offsetHeight;
+            var scrollTop = window.scrollY;
+
+            if (scrollTop > headerHeight) {
+                stickyMenu.style.top = "0";
+            } else {
+                stickyMenu.style.top = (headerHeight - scrollTop) + "px";
+            }
+        });
+        window.onload = function() {
+        window.dispatchEvent(new Event('scroll'));
+    };
+    </script>
+</body>
+</html>
