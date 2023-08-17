@@ -1,3 +1,6 @@
+function redireccionarPagina() {
+  window.location = '../SopaletrasGame/';
+}
 for(fila = 1; fila <= 18; fila++){
     for(columna = 1; columna <= 18; columna++){
         document.getElementById("F" + fila + "C" + columna).readOnly=true;
@@ -263,7 +266,7 @@ function validar(){
     if(p1.toLowerCase()=="ssl" && p2.toLowerCase()=="comunicacion" && p3.toLowerCase()=="protocolo" && p4.toLowerCase()=="conexion" && p5.toLowerCase()=="certificado" && p6.toLowerCase()=="navegador" && p7.toLowerCase()=="encriptacion" && p8.toLowerCase()=="privacidad" && p9.toLowerCase()=="seguridad" && p10.toLowerCase()=="url" && p11.toLowerCase()=="https" && p12.toLowerCase()=="http"){
         document.getElementById("msg").style.fontSize="20px";
         document.getElementById("msg").innerHTML="¡Felicidades, has completado el crucigrama!";
-        window.location = '../SopaletrasGame/';
+        setTimeout("redireccionarPagina()", 3000);
     }
     else{
         if(p1.toLowerCase()!="ssl"){
